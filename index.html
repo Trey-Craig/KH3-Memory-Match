@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="urf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+        <title>Kingdom Hearts 3 Matching Game</title>
+
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" type="image/png" href="img/icon.jpg">
+
+    </head>
+
+    <body>
+
+        <h1>Kingdom Hearts Memory Match</h1>
+            <p id="demo"></p>
+        <div id="game">
+
+            <section class="grid"></section>
+            <div>TIMER <span id="time">04:00</span></div>
+        </div>
+        
+        <button type="button" id="timer_button">Start Timer</button>
+        <button type="button" id="stop_timer">Stop/Reset Timer</button>
+        <img  id="play_button" src="img/blue_play.png" alt="play button" onclick="playAudio()">
+        <img  id="stop_button" src="img/blue_stop.png" alt="stop button" onclick="stopAudio()">
+        <script src="script.js"></script>
+    </body>
+    <!-- AUDIO PLAYER-->
+      
+    <!--AUDIO END-->
+</html>
+

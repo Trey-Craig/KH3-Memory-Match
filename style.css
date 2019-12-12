@@ -1,0 +1,105 @@
+*,
+*::before*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 20px 0;
+    background: url("img/kh_background.png");
+    color: blueviolet;
+    font-size: xx-large;
+    text-align: center;
+}
+
+body h1 {
+    font-family: myFirstFont;
+}
+
+.grid{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 5px;
+    background-color: rgb(48, 43, 43);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 150px;
+    width:  150px;
+}
+
+.selected {
+    border: 4px solid white;
+}
+
+.match {
+    border: 0px solid red;
+    background-image: none !important;
+}
+
+.card {
+    position: relative; 
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.card,
+.back,
+.front {
+    height: 150px;
+    width: 100px;
+}
+
+.back,
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+    background: url("img/KH_pattern.jpg") no-repeat center center / contain;
+    
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: orangered;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.match .front {
+    background: darkslategrey !important;  
+}
+
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Kingdom_Hearts_Font.ttf);
+  }
+
+  div {
+      font-family: myFirstFont;
+  }
+
+  /*Audio Code*/
+body img{
+
+    padding-top: 15px;
+    height: 30px;
+    width: 30px;
+}
+
