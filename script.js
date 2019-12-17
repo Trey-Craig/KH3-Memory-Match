@@ -88,7 +88,7 @@ gameGrid.forEach(item => {
 
     back.style.backgroundImage = `url(${item.img})`;
     //Apply the background image of the div to the cards_array name
-    //card.style.backgroundImage = `url(${item.img})`;
+    
 
     //Append the div to the grid section
     grid.appendChild(card);
@@ -139,7 +139,7 @@ const match = () => {
         card.classList.add('match');
     })
 };
-
+//function to reset guesses and undo selected cards
 const resetGuesses = () => {
     firstGuess = '';
     secondGuess = '';
@@ -154,20 +154,21 @@ const resetGuesses = () => {
 
 display = document.querySelector('#time');
 var interval = null;
+
 //TIMER CODE
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
   console.log(timer)
-   interval = setInterval(function () {
-      minutes = parseInt(timer / 60, 10);
-      seconds = parseInt(timer % 60, 10);
-
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
-
-      display.textContent = minutes + ":" + seconds;
-
-      timer -= 1;
+  interval = setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+    
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+    display.textContent = minutes + ":" + seconds;
+    
+    timer -= 1;
   }, 1000);
 }
 
@@ -182,8 +183,6 @@ time_start.onclick = function () {
 //END TIMER CODE
 
 //RESET TIMER CODE
-
-
 const time_stop = document.getElementById('stop_timer');
 time_stop.onclick = function() {
     display = document.querySelector('#time');
@@ -198,7 +197,7 @@ time_stop.ondblclick = function() {
 const play = document.getElementById('play_button');
 const stop = document.getElementById('stop_button');
 
-var music = new Audio('KH3_theme.mp3');
+var music = new Audio('Scala_Ad_Caelum.mp3');
 
 function playAudio(){
   music.play();
